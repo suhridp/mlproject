@@ -1,0 +1,34 @@
+[2025-05-30 19:15:43,247] 97 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.127.91:5001
+[2025-05-30 19:15:43,247] 97 - INFO - [33mPress CTRL+C to quit[0m
+[2025-05-30 19:16:00,801] 838 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/myenv/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/anaconda3/envs/myenv/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/anaconda3/envs/myenv/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/anaconda3/envs/myenv/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "app.py", line 16, in index
+    return render_template('index.html')
+  File "/opt/anaconda3/envs/myenv/lib/python3.8/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/opt/anaconda3/envs/myenv/lib/python3.8/site-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/opt/anaconda3/envs/myenv/lib/python3.8/site-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+  File "/opt/anaconda3/envs/myenv/lib/python3.8/site-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/opt/anaconda3/envs/myenv/lib/python3.8/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/opt/anaconda3/envs/myenv/lib/python3.8/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/opt/anaconda3/envs/myenv/lib/python3.8/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+[2025-05-30 19:16:00,805] 97 - INFO - 127.0.0.1 - - [30/May/2025 19:16:00] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2025-05-30 19:16:00,924] 97 - INFO - 127.0.0.1 - - [30/May/2025 19:16:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

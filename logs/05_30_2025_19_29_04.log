@@ -1,0 +1,7 @@
+[2025-05-30 19:29:04,767] 97 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.127.91:5002
+[2025-05-30 19:29:04,767] 97 - INFO - [33mPress CTRL+C to quit[0m
+[2025-05-30 19:29:04,768] 97 - INFO -  * Restarting with stat
+[2025-05-30 19:32:44,900] 97 - INFO -  * Restarting with stat

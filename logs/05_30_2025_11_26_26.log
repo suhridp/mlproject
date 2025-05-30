@@ -1,0 +1,12 @@
+[2025-05-30 11:26:27,027] 25 - INFO - Entered the data ingestion method or component
+[2025-05-30 11:26:27,031] 28 - INFO - Read the dataset as dataframe
+[2025-05-30 11:26:27,032] 33 - INFO - Saved raw data
+[2025-05-30 11:26:27,032] 35 - INFO - Train test split initiated
+[2025-05-30 11:26:27,036] 41 - INFO - Data ingestion completed
+[2025-05-30 11:26:27,037] 60 - INFO - Read train and test data completed
+[2025-05-30 11:26:27,037] 42 - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[2025-05-30 11:26:27,037] 43 - INFO - Numerical columns: ['reading_score', 'writing_score']
+[2025-05-30 11:26:27,038] 72 - INFO - Applying preprocessing object on training and test data
+[2025-05-30 11:26:27,044] 79 - INFO - Saving preprocessing object
+[2025-05-30 11:26:27,045] 33 - INFO - Split training and test input data
+[2025-05-30 11:26:51,437] 102 - INFO - Best found model on both training and testing dataset
