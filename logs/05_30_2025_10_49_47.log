@@ -1,0 +1,19 @@
+[2025-05-30 10:49:49,015] 25 - INFO - Entered the data ingestion method or component
+[2025-05-30 10:49:49,017] 28 - INFO - Read the dataset as dataframe
+[2025-05-30 10:49:49,019] 33 - INFO - Saved raw data
+[2025-05-30 10:49:49,019] 35 - INFO - Train test split initiated
+[2025-05-30 10:49:49,022] 41 - INFO - Data ingestion completed
+[2025-05-30 10:49:49,023] 60 - INFO - Read train and test data completed
+[2025-05-30 10:49:49,023] 42 - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[2025-05-30 10:49:49,023] 43 - INFO - Numerical columns: ['reading_score', 'writing_score']
+[2025-05-30 10:49:49,024] 72 - INFO - Applying preprocessing object on training and test data
+[2025-05-30 10:49:49,029] 79 - INFO - Saving preprocessing object
+[2025-05-30 10:49:49,030] 26 - INFO - Split training and testing input data
+[2025-05-30 10:49:49,034] 51 - INFO - Linear Regression R2 score: 0.8782861387680695
+[2025-05-30 10:49:49,037] 51 - INFO - Decision Tree R2 score: 0.7611351106113955
+[2025-05-30 10:49:49,174] 51 - INFO - Random Forest R2 score: 0.8532269578085497
+[2025-05-30 10:49:49,373] 51 - INFO - K-Neighbors R2 score: 0.47561174068704326
+[2025-05-30 10:49:49,424] 51 - INFO - Gradient Boosting R2 score: 0.8722318368547539
+[2025-05-30 10:49:49,570] 51 - INFO - XGBoost R2 score: 0.8212204901494256
+[2025-05-30 10:49:49,607] 51 - INFO - AdaBoost R2 score: 0.8477572792160459
+[2025-05-30 10:49:49,889] 51 - INFO - CatBoosting R2 score: 0.8518305378322716

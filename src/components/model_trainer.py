@@ -7,6 +7,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, AdaBoostRegressor
 from sklearn.neighbors import KNeighborsRegressor
 from xgboost import XGBRegressor
+from catboost import CatBoostRegressor
 
 from src.exception import CustomException 
 from src.logger import logging
@@ -20,7 +21,7 @@ class ModelTrainer:
     def __init__(self):
         self.model_trainer_config = ModelTrainerConfig()
 
-    def initiate_model_trainer(self, train_array, test_array, preprocessor_path):
+    def initiate_model_trainer(self, train_array, test_array ):
         try:
             logging.info("Split training and testing input data")
             X_train, y_train, X_test, y_test = (
@@ -37,7 +38,7 @@ class ModelTrainer:
                 "K-Neighbors": KNeighborsRegressor(),
                 "Gradient Boosting": GradientBoostingRegressor(),
                 "XGBoost": XGBRegressor(),
-                "AdaBoost": AdaBoostRegressor()
+                "AdaBoost": AdaBoostRegressor(),
                 "CatBoosting": CatBoostRegressor(verbose=False)
             }
 
@@ -60,7 +61,7 @@ class ModelTrainer:
                 file_path=self.model_trainer_config.trained_model_file_path,
                 obj=best_model
             )
-
+            print(best_score)
             return best_model, best_score
 
         except Exception as e:
