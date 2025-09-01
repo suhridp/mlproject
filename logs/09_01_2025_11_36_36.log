@@ -1,0 +1,38 @@
+[2025-09-01 11:37:16,288] 875 - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/src/utils.py", line 58, in load_object
+    with open(file_path, "rb") as file_obj:
+         ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'models/preprocessor.pkl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/src/pipeline/predict_pipeline.py", line 18, in predict
+    preprocessor=load_object(file_path=preprocessor_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/src/utils.py", line 62, in load_object
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in script [/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/src/utils.py], line [58], error message: [[Errno 2] No such file or directory: 'models/preprocessor.pkl']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/src/pipeline/predict_pipeline.py", line 25, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occurred in script [/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/src/pipeline/predict_pipeline.py], line [18], error message: [Error occurred in script [/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/src/utils.py], line [58], error message: [[Errno 2] No such file or directory: 'models/preprocessor.pkl']]
