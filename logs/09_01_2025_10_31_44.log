@@ -5,3 +5,4 @@
 [2025-09-01 10:35:46,258] 97 - INFO - 127.0.0.1 - - [01/Sep/2025 10:35:46] "GET /predictdata HTTP/1.1" 200 -
 [2025-09-01 10:35:53,255] 97 - INFO - 127.0.0.1 - - [01/Sep/2025 10:35:53] "GET /predictdata HTTP/1.1" 200 -
 [2025-09-01 10:36:22,848] 97 - INFO - 127.0.0.1 - - [01/Sep/2025 10:36:22] "POST /predictdata HTTP/1.1" 200 -
+[2025-09-01 11:17:12,320] 97 - INFO -  * Detected change in '/Users/suhridbeharipaul/Desktop/ml projects/studentmarksprediction/src/pipeline/predict_pipeline.py', reloading
